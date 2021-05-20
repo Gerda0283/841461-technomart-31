@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Даша Гермаш](https://up.htmlacademy.ru/htmlcss/31/user/841461).
-* Наставник: [Сергей Шрамко](https://up.htmlacademy.ru/htmlcss/31/user/852139).
+* Наставник: [Сергей Шрамко](https://htmlacademy.ru/profile/id852139).
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
