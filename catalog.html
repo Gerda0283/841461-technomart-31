@@ -15,17 +15,20 @@
       <a href="index.html">
         <img src="images/logo-technomart.svg" class="logo" width="108" height="18" alt="Логотип интернет-магазина" />
       </a>
-      <div class="search">
-        <form action="https://echo.htmlacademy.ru/courses" method="get">
-          <input id="search" type="text" name="search" placeholder="Поиск:">
-          <!--Поле со скрытыми бордерами-->
-          <button type="submit"></button>
-          <!--Скрытая css кнопка с иконкой лупы. Местами с полем поменяется сиэсесиной-->
-        </form>
-      </div>
-      <a class="bookmarks" href="blanc.html">Закладки:</a> <output for="bookmarks" name="result">0</output>
-      <a class="cart" href="blanc.html">Корзина:</a> <output for="cart" name="result">0</output>
-      <a class="make-order" href="blanc.html">Оформить заказ</a>
+      <form class="search" action="https://echo.htmlacademy.ru/courses" method="get">
+        <input type="search" placeholder="Поиск:">
+      </form>
+      <ul class="user-interface">
+        <li>
+          <a class="bookmarks" href="blanc.html">Закладки:</a> <span>0</span>
+        </li>
+        <li>
+          <a class="cart" href="blanc.html">Корзина:</a> <span>0</span>
+        </li>
+        <li>
+          <a class="make-order" href="blanc.html">Оформить заказ</a>
+        </li>
+      </ul>
     </div>
     <div class="info-section">
       <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
@@ -406,7 +409,7 @@
         <a href="tel:+78005558628">+7 800 555-86-28</a>
       </p>
     </div>
-    <nav>
+    <div>
       <ul>
         <li><a href="blanc.html">Компания</a></li>
         <li><a href="blanc.html">Новости</a></li>
@@ -420,7 +423,7 @@
         <li><a>Инструмент</a></li>
         <li><a href="blanc.html">Спецпредложения</a></li>
       </ul>
-    </nav>
+    </div>
     <div>
       <p>&copy; 2010–2021 Компания «Техномарт»<br />
         Все права защищены</p>
