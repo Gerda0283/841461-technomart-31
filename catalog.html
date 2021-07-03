@@ -22,14 +22,16 @@
           </svg>
         </a>
       <form class="search" action="https://echo.htmlacademy.ru/courses" method="get">
-        <input name="search" id="search" type="search" value="Поиск:">
+        <label name="search-label" for="search">
+          <input name="search" id="search" type="search" value="Поиск:">
+        </label>
       </form>
       <ul class="user-interface">
-        <li class="interface-item">
+        <li class="interface-item-bookmarks">
           <a class="btn-include" href="blank.html">Закладки:</a>
           <span class="result">0</span>
         </li>
-        <li class="interface-item">
+        <li class="interface-item-cart">
           <a class="btn-include-cart" href="blank.html">Корзина:</a>
           <span class="result">0</span>
         </li>
@@ -68,23 +70,30 @@
       </ul>
     </nav>
   </header>
-  <main class="catalog-page container">
-    <h1 class="main-headline">Перфораторы</h1>
+  <main class="catalog-page">
+    <div class="main-headline-container">
+      <h1 class="main-headline">Перфораторы</h1>
+    </div>
+    <div class="breadcrumbs-container">
     <ul class="breadcrumbs">
-      <!--Поменять местами с заголовком с помощью css-->
-      <li><a href="index.html">Главная</a></li><!--Заменить на иконку с svg-->
+      <li>
+        <a href="index.html">
+          <svg class="to-main-page" width="14" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 8v4h4V8h2v4h4V8L7 3.516 2 8z" /><path d="M13.831 6.365L12 4.751V0h-2v2.987L7.332.635c-.02-.017-.043-.023-.064-.037a.465.465 0 00-.08-.047.551.551 0 00-.095-.024C7.062.521 7.032.515 7 .515c-.031 0-.061.006-.092.012a.46.46 0 00-.095.025c-.028.011-.053.029-.08.046-.021.014-.045.02-.064.037L.171 6.365a.501.501 0 00.661.75L7 1.677l6.169 5.438a.501.501 0 00.662-.75z" /></svg>
+        </a>
+      </li><!--Заменить на иконку с svg-->
       <li><a href="blank.html">Каталог</a></li>
       <li><a href="blank.html">Инструмент</a></li>
       <li class="breadcrumbs-current">Перфораторы</li>
     </ul>
-    <section id="product-list" class="product-list">
-      <h2 class="section-headline visually-hidden">Каталог товаров интернет-магазина</h2>
+    </div>
+    <section id="product-list" class="product-list container">
+      <h2 class="visually-hidden">Каталог товаров интернет-магазина</h2>
       <!--скрытый h2-->
-      <h3 class="division-hedline visually-hidden">Инструмент</h3>
+      <h3 class="visually-hidden">Инструмент</h3>
       <!--скрытый h3-->
       <div class="filters">
-        <span class="filtr-name">Фильтр:</span>
-        <form action="https://echo.htmlacademy.ru/courses" method="get">
+        <span class="filter-name">Фильтр:</span>
+        <form class="filter-form" action="https://echo.htmlacademy.ru/courses" method="get">
           <fieldset>
             <!--Исправленный фильтр цены. инлайн стили заданы временно для правильной стилизации фильтра-->
             <legend>Цена:</legend>
@@ -92,83 +101,82 @@
               <div class="range-controls">
                 <div class="scale">
                   <div class="bar" style="width: 40%; margin-left: 10%;">
-                    <button class="toggle toggle-bar-min" style="left: 10%;"></button>
-                    <button class="toggle toggle-bar-max" style="left: 50%;"></button>
+                    <div class="toggle toggle-bar-min" tabindex="0" style="left: 10%;"></div>
+                    <div class="toggle toggle-bar-max" tabindex="0" style="left: 50%;"></div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="price-controls">
-              <label><input name="mın-prıce" type="number" min="0" value="0" /></label>&mdash;
-              <label><input name="max-prıce" type="number" max="3000" value="30000" /></label>
+              <label name="mın-prıce" class="min-price">
+                <input name="mın-prıce" type="text" min="0" value="0" />
+              </label>&mdash;
+              <label name="mın-prıce" class="max-price">
+                <input name="max-prıce" type="text" max="30000" value="30000" />
+              </label>
             </div>
           </fieldset>
           <fieldset>
             <legend>Производители:</legend>
-            <ul>
+            <ul class="filter-checkbox-ul">
               <li class="filter-option filter-checkbox">
-                <input class="filter-input-checkbox filter-input" type="checkbox" name="Bosh" id="Bosh" value="Bosh" checked />
+                <input class="filter-input-checkbox filter-input visually-hidden" type="checkbox" name="Bosh" id="Bosh" value="Bosh" checked />
                 <label for="Bosh">Bosh</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input class="filter-input-checkbox filter-input" type="checkbox" name="Interscol" id="Interscol" value="Интерскол" />
+                <input class="filter-input-checkbox filter-input visually-hidden" type="checkbox" name="Interscol" id="Interscol" value="Интерскол" />
                 <label for="Interscol">Интерскол</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input class="filter-input-checkbox filter-input" type="checkbox" name="Makita" value="Makita" checked />
+                <input class="filter-input-checkbox filter-input visually-hidden" type="checkbox" name="Makita" id="Makita" value="Makita" checked disabled />
                 <label for="Makita">Makita</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input class="filter-input-checkbox filter-input" type="checkbox" name="DeWalt" value="DeWalt" />
+                <input class="filter-input-checkbox filter-input visually-hidden" type="checkbox" name="DeWalt" id="DeWalt" value="DeWalt" />
                 <label for="DeWalt">DeWalt</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input class="filter-input-checkbox filter-input" type="checkbox" name="Hitachi" value="Hitachi" />
+                <input class="filter-input-checkbox filter-input visually-hidden" type="checkbox" name="Hitachi" id="Hitachi" value="Hitachi" disabled />
                 <label for="Hitachi">Hitachi</label>
               </li>
             </ul>
           </fieldset>
           <fieldset>
             <legend>Питание:</legend>
-            <ul>
+            <ul class="filter-radio-ul">
               <li class="filter-option filter-radio">
-                <input class="filter-input-radio filter-input" type="radio" name="power-supply" value="rechargeable" id="rechargeable">
+                <input class="filter-input-radio filter-input visually-hidden" type="radio" name="power-supply" value="rechargeable" id="rechargeable" checked />
                 <label for="rechargeable">Аккумуляторные</label>
               </li>
               <li class="filter-option filter-radio">
-                <input class="filter-input-radio filter-input" type="radio" name="power-supply" value="mains" id="mains">
-                <label for="rechargeable">Сетевые</label>
+                <input class="filter-input-radio filter-input visually-hidden" type="radio" name="power-supply" value="mains" id="mains" />
+                <label for="mains">Сетевые</label>
               </li>
             </ul>
           </fieldset>
           <button type="submit" class="filter-button button">Показать</button>
         </form>
       </div>
-      <div class="sorting">
-        <span>Сортировка:</span>
-        <ul>
-          <li><button type="button">по цене</button></li>
-          <li><button type="button">по типу</button></li>
-          <li><button type="button">по функционалу</button></li>
-          <li><button type="button">вверх</button></li>
-          <!--Иконка задаётся с помощью псевдоклассов в файле стиля-->
-          <li><button type="button">вниз</button></li>
-          <!--Иконка задаётся с помощью псевдоклассов в файле стиля-->
-        </ul>
-      </div>
-      <div class="container">
+      <div class="product-set">
+        <div class="sorting">
+          <span>Сортировка:</span>
+          <ul class="sorting-buttons">
+            <li><button class="current" type="button">по цене</button></li>
+            <li><button type="button">по типу</button></li>
+            <li><button type="button">по функционалу</button></li>
+            <li><button type="button"><svg class="up-button current" role="img" aria-hidden="true" width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0L11 10H0" /></svg></button></li>
+            <li><button type="button"><svg class="down-button" role="img" aria-hidden="true" width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 10L0 0h11" /></svg></button></li>
+          </ul>
+        </div>
         <ul class="product-grid">
           <li class="product-item">
             <div class="product-inner">
-              <!--Обрамляется тенью при наведении на любой из вложенных элементов-->
               <h4 class="visually-hidden">Перфоратор BOSCH BFG 6000</h4>
               <img class="product-img" src="images/products/bosh-bfg-6000.jpg" width="127" height="112"
                 alt="Перфоратор BOSCH BFG 6000" />
               <div class="btn-set">
-                <!--Скрыт.Появляется при наведении на любой из потомков a class="product-img"-->
                 <ul>
                   <li><button class="button btn-buy" type="button">купить</button>
-                    <!--Иконка задаётся с помощью псевдоклассов в файле стиля-->
                   </li>
                   <li><button class="button bookmarks" type="button">в закладки</button></li>
                 </ul>
@@ -180,15 +188,12 @@
           </li>
           <li class="product-item">
             <div class="product-inner">
-              <!--Обрамляется тенью при наведении на любой из вложенных элементов-->
               <h4 class="visually-hidden">Перфоратор BOSCH BFG 6000</h4>
               <img class="product-img" src="images/products/bosh-bfg-6000.jpg" width="127" height="112"
                 alt="Перфоратор BOSCH BFG 6000" />
               <div class="btn-set">
-                <!--Скрыт.Появляется при наведении на любой из потомков a class="product-img"-->
                 <ul>
-                  <li><button class="button buy" type="button">купить</button>
-                    <!--Иконка задаётся с помощью псевдоклассов в файле стиля-->
+                  <li><button class="button btn-buy" type="button">купить</button>
                   </li>
                   <li><button class="button bookmarks" type="button">в закладки</button></li>
                 </ul>
@@ -200,15 +205,12 @@
           </li>
           <li class="product-item">
             <div class="product-inner">
-              <!--Обрамляется тенью при наведении на любой из вложенных элементов-->
               <h4 class="visually-hidden">Перфоратор BOSCH BFG 6000</h4>
               <img class="product-img" src="images/products/bosh-bfg-6000.jpg" width="127" height="112"
                 alt="Перфоратор BOSCH BFG 6000" />
               <div class="btn-set">
-                <!--Скрыт.Появляется при наведении на любой из потомков a class="product-img"-->
                 <ul>
-                  <li><button class="button buy" type="button">купить</button>
-                    <!--Иконка задаётся с помощью псевдоклассов в файле стиля-->
+                  <li><button class="button btn-buy" type="button">купить</button>
                   </li>
                   <li><button class="button bookmarks" type="button">в закладки</button></li>
                 </ul>
@@ -216,20 +218,17 @@
               <a class="product-link">Перфоратор BOSCH BFG 6000</a>
               <del>30500 р.</del>
               <a class="button price">25500 р.</a>
-              <span class="label-new">new</span>
+              <span class="new-label">new</span>
             </div>
           </li>
           <li class="product-item">
             <div class="product-inner">
-              <!--Обрамляется тенью при наведении на любой из вложенных элементов-->
               <h4 class="visually-hidden">Перфоратор BOSCH BFG 3000</h4>
               <img class="product-img" src="images/products/bosh-bfg-3000.jpg" width="127" height="112"
                 alt="Перфоратор BOSCH BFG 3000" />
               <div class="btn-set">
-                <!--Скрыт.Появляется при наведении на любой из потомков a class="product-img"-->
                 <ul>
-                  <li><button class="button buy" type="button">купить</button>
-                    <!--Иконка задаётся с помощью псевдоклассов в файле стиля-->
+                  <li><button class="button btn-buy" type="button">купить</button>
                   </li>
                   <li><button class="button bookmarks" type="button">в закладки</button></li>
                 </ul>
@@ -237,20 +236,17 @@
               <a class="product-link">Перфоратор BOSCH BFG 3000</a>
               <del>22500 р.</del>
               <a class="button price">15500 р.</a>
-              <span class="label-new">new</span>
+              <span class="new-label">new</span>
             </div>
           </li>
           <li class="product-item">
             <div class="product-inner">
-              <!--Обрамляется тенью при наведении на любой из вложенных элементов-->
               <h4 class="visually-hidden">Перфоратор BOSCH BFG 6000</h4>
               <img class="product-img" src="images/products/bosh-bfg-6000.jpg" width="127" height="112"
                 alt="Перфоратор BOSCH BFG 6000" />
               <div class="btn-set">
-                <!--Скрыт.Появляется при наведении на любой из потомков a class="product-img"-->
                 <ul>
-                  <li><button class="button buy" type="button">купить</button>
-                    <!--Иконка задаётся с помощью псевдоклассов в файле стиля-->
+                  <li><button class="button btn-buy" type="button">купить</button>
                   </li>
                   <li><button class="button bookmarks" type="button">в закладки</button></li>
                 </ul>
@@ -262,15 +258,12 @@
           </li>
           <li class="product-item">
             <div class="product-inner">
-              <!--Обрамляется тенью при наведении на любой из вложенных элементов-->
               <h4 class="visually-hidden">Перфоратор BOSCH BFG 2000</h4>
               <img class="product-img" src="images/products/bosh-bfg-2000.jpg" width="127" height="112"
                 alt="Перфоратор BOSCH BFG 2000" />
               <div class="btn-set">
-                <!--Скрыт.Появляется при наведении на любой из элементов div class="product"-->
                 <ul>
-                  <li><button class="button buy" type="button">купить</button>
-                    <!--Иконка задаётся с помощью псевдоклассов в файле стиля-->
+                  <li><button class="button btn-buy" type="button">купить</button>
                   </li>
                   <li><button class="button bookmarks" type="button">в закладки</button></li>
                 </ul>
@@ -278,20 +271,17 @@
               <a class="product-link">Перфоратор BOSCH BFG 2000</a>
               <del>22500 р.</del>
               <a class="button price">15500 р.</a>
-              <span class="label-new">new</span>
+              <span class="new-label">new</span>
             </div>
           </li>
           <li class="product-item">
             <div class="product-inner">
-              <!--Обрамляется тенью при наведении на любой из вложенных элементов-->
               <h4 class="visually-hidden">Перфоратор BOSCH BFG 3000</h4>
               <img class="product-img" src="images/products/bosh-bfg-3000.jpg" width="127" height="112"
                 alt="Перфоратор BOSCH BFG 3000" />
               <div class="btn-set">
-                <!--Скрыт.Появляется при наведении на любой из потомков a class="product-img"-->
                 <ul>
-                  <li><button class="button buy" type="button">купить</button>
-                    <!--Иконка задаётся с помощью псевдоклассов в файле стиля-->
+                  <li><button class="button btn-buy" type="button">купить</button>
                   </li>
                   <li><button class="button bookmarks" type="button">в закладки</button></li>
                 </ul>
@@ -299,20 +289,17 @@
               <a class="product-link">Перфоратор BOSCH BFG 3000</a>
               <del>22500 р.</del>
               <a class="button price">15500 р.</a>
-              <span class="label-new">new</span>
+              <span class="new-label">new</span>
             </div>
           </li>
           <li class="product-item">
             <div class="product-inner">
-              <!--Обрамляется тенью при наведении на любой из вложенных элементов-->
               <h4 class="visually-hidden">Перфоратор BOSCH BFG 6000</h4>
               <img class="product-img" src="images/products/bosh-bfg-6000.jpg" width="127" height="112"
                 alt="Перфоратор BOSCH BFG 6000" />
               <div class="btn-set">
-                <!--Скрыт.Появляется при наведении на любой из потомков a class="product-img"-->
                 <ul>
-                  <li><button class="button buy" type="button">купить</button>
-                    <!--Иконка задаётся с помощью псевдоклассов в файле стиля-->
+                  <li><button class="button btn-buy" type="button">купить</button>
                   </li>
                   <li><button class="button bookmarks" type="button">в закладки</button></li>
                 </ul>
@@ -324,15 +311,12 @@
           </li>
           <li class="product-item">
             <div class="product-inner">
-              <!--Обрамляется тенью при наведении на любой из вложенных элементов-->
               <h4 class="visually-hidden">Перфоратор BOSCH BFG 2000</h4>
               <img class="product-img" src="images/products/bosh-bfg-2000.jpg" width="127" height="112"
                 alt="Перфоратор BOSCH BFG 2000" />
               <div class="btn-set">
-                <!--Скрыт.Появляется при наведении на любой из элементов div class="product"-->
                 <ul>
-                  <li><button class="button buy" type="button">купить</button>
-                    <!--Иконка задаётся с помощью псевдоклассов в файле стиля-->
+                  <li><button class="button btn-buy" type="button">купить</button>
                   </li>
                   <li><button class="button bookmarks" type="button">в закладки</button></li>
                 </ul>
@@ -340,20 +324,17 @@
               <a class="product-link">Перфоратор BOSCH BFG 2000</a>
               <del>22500 р.</del>
               <a class="button price">15500 р.</a>
-              <span class="label-new">new</span>
+              <span class="new-label">new</span>
             </div>
           </li>
           <li class="product-item">
             <div class="product-inner">
-              <!--Обрамляется тенью при наведении на любой из вложенных элементов-->
               <h4 class="visually-hidden">Перфоратор BOSCH BFG 3000</h4>
               <img class="product-img" src="images/products/bosh-bfg-3000.jpg" width="127" height="112"
                 alt="Перфоратор BOSCH BFG 3000" />
               <div class="btn-set">
-                <!--Скрыт.Появляется при наведении на любой из потомков a class="product-img"-->
                 <ul>
-                  <li><button class="button buy" type="button">купить</button>
-                    <!--Иконка задаётся с помощью псевдоклассов в файле стиля-->
+                  <li><button class="button btn-buy" type="button">купить</button>
                   </li>
                   <li><button class="button bookmarks" type="button">в закладки</button></li>
                 </ul>
@@ -361,20 +342,17 @@
               <a class="product-link">Перфоратор BOSCH BFG 3000</a>
               <del>22500 р.</del>
               <a class="button price">15500 р.</a>
-              <span class="label-new">new</span>
+              <span class="new-label">new</span>
             </div>
           </li>
           <li class="product-item">
             <div class="product-inner">
-              <!--Обрамляется тенью при наведении на любой из вложенных элементов-->
               <h4 class="visually-hidden">Перфоратор BOSCH BFG 6000</h4>
               <img class="product-img" src="images/products/bosh-bfg-6000.jpg" width="127" height="112"
                 alt="Перфоратор BOSCH BFG 6000" />
               <div class="btn-set">
-                <!--Скрыт.Появляется при наведении на любой из потомков a class="product-img"-->
                 <ul>
-                  <li><button class="button buy" type="button">купить</button>
-                    <!--Иконка задаётся с помощью псевдоклассов в файле стиля-->
+                  <li><button class="button btn-buy" type="button">купить</button>
                   </li>
                   <li><button class="button bookmarks" type="button">в закладки</button></li>
                 </ul>
@@ -386,15 +364,12 @@
           </li>
           <li class="product-item">
             <div class="product-inner">
-              <!--Обрамляется тенью при наведении на любой из вложенных элементов-->
               <h4 class="visually-hidden">Перфоратор BOSCH BFG 2000</h4>
               <img class="product-img" src="images/products/bosh-bfg-2000.jpg" width="127" height="112"
                 alt="Перфоратор BOSCH BFG 2000" />
               <div class="btn-set">
-                <!--Скрыт.Появляется при наведении на любой из элементов div class="product"-->
                 <ul>
-                  <li><button class="button buy" type="button">купить</button>
-                    <!--Иконка задаётся с помощью псевдоклассов в файле стиля-->
+                  <li><button class="button btn-buy" type="button">купить</button>
                   </li>
                   <li><button class="button bookmarks" type="button">в закладки</button></li>
                 </ul>
@@ -402,15 +377,15 @@
               <a class="product-link">Перфоратор BOSCH BFG 2000</a>
               <del>22500 р.</del>
               <a class="button price">15500 р.</a>
-              <span class="label-new">new</span>
+              <span class="new-label">new</span>
             </div>
           </li>
         </ul>
         <ul class="pagination">
-          <li class="page-item">
-            <a class="visually-hidden" aria-disabled="true">Предидущая</a>
+          <li class="page-item visually-hidden">
+            <a aria-disabled="true">Предидущая</a>
           </li>
-          <li class="page-item"><a href="blank.html" class="page-link active">1</a></li>
+          <li class="page-item current"><a class="page-link">1</a></li>
           <li class="page-item"><a href="blank.html" class="page-link">2</a></li>
           <li class="page-item"><a href="blank.html" class="page-link">3</a></li>
           <li class="page-item">
@@ -418,7 +393,7 @@
           </li>
         </ul>
       </div>
-      <div class="modal-cart">
+      <div class="modal-cart visually-hidden">
         <!--Форма (Модальное окно наполненной корзины)-->
         <button type="button" class="closed">Закрыть</button>
         <!--Иконка задаётся с помощью псевдоклассов в файле стиля-->
@@ -429,16 +404,18 @@
         <button type="button btn-transfer">Продолжить покупки</button>
       </div>
     </section>
-    <section id="company" class="company">
-      <h2 class="section-headline ">Пара слов о перфораторах</h2>
-      <p>
+    <section id="about-product" class="about-product">
+      <div class="container">
+        <h2 class="section-headline ">Пара слов о перфораторах</h2>
+        <p>
         Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче,
         бетоне и камне.<br />
         Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели,
-        шуруповерта и отбойного молотка.
+        шуруповерта и отбойного молотка.<br />
         В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная
         дрель.
-      </p>
+        </p>
+      </div>
     </section>
   </main>
   <footer class="main-footer">
