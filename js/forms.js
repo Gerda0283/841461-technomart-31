@@ -32,8 +32,7 @@ if (storage) {
 
 close.addEventListener("click", function (evt) {
 evt.preventDefault();
-popup.classList.remove("modal-feedback-show");
-popup.classList.remove("modal-error");
+popup.classList.remove("modal-feedback-show", "modal-error");
 });
 
 submitForm.addEventListener("submit", function (evt) {
