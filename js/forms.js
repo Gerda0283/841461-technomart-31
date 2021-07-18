@@ -1,8 +1,8 @@
-/* Feedback Form */
+
 
 const link = document.querySelector(".get-in-touch-link");
 const popup = document.querySelector(".modal-feedback");
-const close = document.querySelector(".closed");
+const close = popup.querySelector(".closed");
 const feedbackForm = popup.querySelector(".feedback-form");
 const submitForm = popup.querySelector("[type=submit]");
 const name = popup.querySelector("[value=name]");
@@ -52,8 +52,9 @@ window.addEventListener("keydown", function (evt) {
 if (evt.keyCode === 27) {
   if (popup.classList.contains("modal-feedback-show")) {
     evt.preventDefault();
-    popup.classList.remove("modal-feedback-show");
-    popup.classList.remove("modal-error");
+    popup.classList.remove("modal-error", "modal-feedback-show");
   }
 }
 });
+
+
