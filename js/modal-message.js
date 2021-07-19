@@ -1,15 +1,17 @@
 
-/* Map Form */
 
-const buyLink = document.querySelector(".btn-buy");
+const buyLink = document.querySelectorAll(".btn-buy");
 const cartPopup = document.querySelector(".modal-cart");
 const cartClose = cartPopup.querySelector(".closed");
 const cartBtnClose = cartPopup.querySelector(".btn-close-modal");
 
-buyLink.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  cartPopup.classList.add("modal-cart-show");
+
+for (let button of buyLink) {
+  button.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    cartPopup.classList.add("modal-cart-show");
 });
+};
 
 cartClose.addEventListener("click", function (evt) {
   evt.preventDefault();
