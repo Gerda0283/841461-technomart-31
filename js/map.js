@@ -1,5 +1,8 @@
 
-/* Map Form */
+import {
+  isEnterKey,
+  isEscapeKey,
+} from "./util.js";
 
 const mapLink = document.querySelector(".map-popup");
 const mapPopup = document.querySelector(".modal-map");
@@ -16,7 +19,7 @@ mapClose.addEventListener("click", function (evt) {
 });
 
 window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
+  if (isEscapeKey) {
     if (mapPopup.classList.contains("modal-map-show")) {
       evt.preventDefault();
       mapPopup.classList.remove("modal-map-show");
