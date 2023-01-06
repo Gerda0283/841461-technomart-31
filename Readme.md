@@ -1,4 +1,4 @@
-# Personal Project «Cat energy»
+# Personal Project «Technomart»
 
 * Student: [Daria Germash](https://up.htmlacademy.ru/javascript/27/user/841461).
 * Menthor: [Serhii Shramko](https://htmlacademy.ru/profile/id852139).
