@@ -1,42 +1,24 @@
-# Личный проект «Техномарт»
+# Personal Project «Cat energy»
 
-* Студент: [Даша Гермаш](https://up.htmlacademy.ru/htmlcss/31/user/841461).
-* Наставник: [Сергей Шрамко](https://htmlacademy.ru/profile/id852139).
+* Student: [Daria Germash](https://up.htmlacademy.ru/javascript/27/user/841461).
+* Menthor: [Serhii Shramko](https://htmlacademy.ru/profile/id852139).
 ---
 
-_Не удаляйте и не обращайте внимание на файлы:_<br>
+_Please don't delete and don't change files:_<br>
 _`.editorconfig`, `.gitattributes`, `.gitignore`, `Contributing.md`, `Readme.md`._
 
 ---
 
-### Памятка
+### Reminder
 
-#### 1. Зарегистрируйтесь на Гитхабе
+#### 1. Please register at Github
 
-Если у вас ещё нет аккаунта на [github.com](https://github.com/join), скорее зарегистрируйтесь.
+#### 2. Create fork
 
-#### 2. Создайте форк
+#### 3. Please clone your repository to your PC
 
-[Откройте мастер-репозиторий](https://github.com/htmlacademy-htmlcss/841461-technomart-31) и нажмите кнопку «Fork» в правом верхнем углу. Репозиторий из Академии скопируется в ваш аккаунт.
-
-<img width="769" alt="" src="https://user-images.githubusercontent.com/10909/29037784-cf833fec-7bad-11e7-8eec-dfe32aac11b1.jpg">
-
-Получится вот так:
-
-<img width="769" alt="" src="https://user-images.githubusercontent.com/10909/29037785-d1363f60-7bad-11e7-99da-f02a2f996a01.jpg">
-
-#### 3. Клонируйте репозиторий на свой компьютер
-
-Будьте внимательны: нужно клонировать свой репозиторий (форк), а не репозиторий Академии. Нажмите кнопку «Clone or download», а затем «Open in Desktop», чтобы клонировать репозиторий через программу [GitHub Desktop](https://desktop.github.com):
-
-<img width="769" alt="" src="https://user-images.githubusercontent.com/10909/29037788-d26a3558-7bad-11e7-9d08-2f9f0f6e467a.jpg">
-
-Программа клонирует репозиторий на ваш компьютер и подготовит всё необходимое для старта работы.
-
-#### 4. Начинайте обучение!
+#### 4. Let's get started!
 
 ---
 
-<a href="https://htmlacademy.ru/intensive/htmlcss"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/htmlcss/logo-for-github-2.png"></a>
-
-Репозиторий создан для обучения на профессиональном онлайн‑курсе «[HTML и CSS. Профессиональная вёрстка сайтов](https://htmlacademy.ru/intensive/htmlcss)» от [HTML Academy](https://htmlacademy.ru).
+Repository had been created for studying at intensive online‑course «[HTML и CSS. Professional website mark-up](https://htmlacademy.ru/intensive/htmlcss)» от [HTML Academy](https://htmlacademy.ru).
