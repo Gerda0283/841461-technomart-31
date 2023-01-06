@@ -1,10 +1,12 @@
-
+import {
+  isEnterKey,
+  isEscapeKey,
+} from "./util.js";
 
 const buyLink = document.querySelectorAll(".btn-buy");
 const cartPopup = document.querySelector(".modal-cart");
 const cartClose = cartPopup.querySelector(".closed");
 const cartBtnClose = cartPopup.querySelector(".btn-close-modal");
-
 
 for (let button of buyLink) {
   button.addEventListener("click", function (evt) {
@@ -24,7 +26,7 @@ cartBtnClose.addEventListener("click", function (evt) {
 });
 
 window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
+  if (isEscapeKey) {
     if (cartPopup.classList.contains("modal-cart-show")) {
       evt.preventDefault();
       cartPopup.classList.remove("modal-cart-show");
